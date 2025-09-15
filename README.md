@@ -18,7 +18,7 @@
 - Taller de programacion: Listo
 
 ## 2do Año - 1er Cuatrimestre (2 1)
-- Analisis y Metodologias: Falta
+- Analisis y Metodologias: Listo
 - Base de Datos 2: Falta
 - Nuevas Tecnologias 2: Falta
 - Programacion 2: Falta
