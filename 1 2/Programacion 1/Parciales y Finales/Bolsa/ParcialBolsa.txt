@@ -1,0 +1,15 @@
+Una pequeña casa de bolsa nos contrató para reemplazar sus antiguos sistemas de operación. En la primera etapa del proyecto debemos crear un prototipo que nos permita procesar las órdenes de compra/venta de los clientes y mostrar el historial de cada uno.
+Como es una empresa pequeña solo maneja una cartera de 10 clientes fijos.
+La casa de bolsa maneja dos tipos de Instrumentos Financieros (Bonos y Fondos de Inversión) de los cuales se conoce quién fue el emisor, el nombre y un código alfanumérico que lo identifica.
+Adicionalmente, de los bonos se conoce el porcentaje de interés y el valor nominal (el monto en pesos sobre el que se calcula el interés) y de los fondos de inversión se conoce el número de cuotas partes (cada una de las “porciones” en las que éste se divide) y una lista de instrumentos que lo componen (pueden ser bonos u otros fondos de inversión).
+Todos los instrumentos financieros son apreciables, tienen la capacidad de indicarnos cuál es su precio y el mismo se calcula de la siguiente forma:
+Los bonos indican su precio dividiendo el valor nominal por el % de interés.
+Los fondos de inversión obtienen su precio sumando el precio de todos los instrumentos que lo componen y dividiéndolo por la cantidad de cuotas partes de este.
+De los clientes se conoce el nombre, el apellido, el DNI y su saldo;
+Los clientes compran o venden instrumentos por medio de las órdenes. Una Orden se compone de una cantidad, un instrumento financiero, un cliente y se indica si es de venta. Tal como los instrumentos financieros, las órdenes también son apreciables.
+Las órdenes se procesan en el orden en el que fueron ingresadas y desaparecen luego de que las procese un cliente. Cuando se crean las Órdenes se valida que exista tanto el instrumento como el cliente.
+Al procesar la orden dentro de un Cliente, si la orden es de compra tiene que restar a su saldo el precio de la Orden al Cliente, si es menor a 0 se va a registrar en el historial un error de compra. Si la orden es de venta se va a sumar al saldo el precio de la Orden al Cliente. En los dos casos si se realizó la operación también tiene que registrarse en el historial. Siempre la última operación es la que está más a mano.
+Por último, se debe imprimir el historial de órdenes de todos los clientes en orden cronológico.
+
+Completar los métodos  cargarOrden() y procesarOrdenesDeClientes() de CasaDeBolsa;
+Completar el método imprimirHistorial() 

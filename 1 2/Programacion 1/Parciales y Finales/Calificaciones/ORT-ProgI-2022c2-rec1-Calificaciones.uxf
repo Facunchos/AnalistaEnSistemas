@@ -1,0 +1,83 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>8</zoom_level><element><id>UMLClass</id><coordinates><x>0</x><y>112</y><w>312</w><h>88</h></coordinates><panel_attributes>Curso
+--
++importar(PilaCalificacionSinProcesar):void
++exportarCalificadosDeMateria(string):Cola&lt;AlumnoCalificado&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>544</x><y>200</y><w>160</w><h>88</h></coordinates><panel_attributes>RubroCalificacion
+&lt;&lt;enum&gt;&gt;
+--
+_+TRABAJO_EN_GRUPO_
+_+PRÁCTICOS_
+_+AUTOCUESTIONARIOS_
+_+EXÁMENES_</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>416</y><w>144</w><h>112</h></coordinates><panel_attributes>Alumno
+--
+-nombreCompleto:String
+-dni:int
+--
+Alumno(String, int)
++isDNI(int): boolean
++getNombre(): String
++getDNI(): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>96</x><y>280</y><w>208</w><h>56</h></coordinates><panel_attributes>ListaAlumnoOrdenadaDNIDesc
+--
++ListaAlumnoOrdenadaDNIDesc()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>192</x><y>328</y><w>24</w><h>104</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>736</x><y>424</y><w>216</w><h>96</h></coordinates><panel_attributes>AlumnoCalificado
+--
++AlumnoCalificado(Alumno)
++calificar(RubroCalificacion,boolean):void
++tieneCalificacionSinNota(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>432</x><y>512</y><w>152</w><h>72</h></coordinates><panel_attributes>Calificacion
+&lt;&lt;enum&gt;&gt;
+--
+_+DESAPROBADO_
+_+APROBADO_
+_+SIN_NOTA_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>576</x><y>512</y><w>288</w><h>72</h></coordinates><panel_attributes>lt=&lt;-
+m1=[RubroCalificacion.values().length]
+-calificaciones</panel_attributes><additional_attributes>10;60;340;60;340;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>800</x><y>280</y><w>144</w><h>96</h></coordinates><panel_attributes>ListaOrdenadaPorNombre
+--
++ListaOrdenadaPorNombre()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>192</y><w>112</w><h>104</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+-alumnosInscriptos</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>840</x><y>368</y><w>24</w><h>72</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>736</x><y>96</y><w>256</w><h>104</h></coordinates><panel_attributes>Materia
+--
+-codigo:String
+-nombreDocente:String
+--
++calificar(calificacion):void
+-buscarAlumno(int): AlumnoCalificado
++exportarCalificadosSinNota(): ColaAlumnoCalificado 
++getCodigo(): String
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>304</x><y>144</y><w>256</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+-materias</panel_attributes><additional_attributes>300;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>352</x><y>176</y><w>144</w><h>88</h></coordinates><panel_attributes>CalificacionSinProcesar
+--
+-dni:int
+-codigoMateria:String
+--
++estaAprobada():boolean
++getDni(): int
++getRubro(): RubroCalificacion</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>488</x><y>200</y><w>72</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+-rubro</panel_attributes><additional_attributes>70;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>104</x><y>16</y><w>152</w><h>48</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+/Importable/
+--
+/+importar(Pila&lt;T&gt;):void/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>304</x><y>176</y><w>64</w><h>24</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>60;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>168</x><y>56</y><w>24</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>256</x><y>464</y><w>496</w><h>24</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;600;10</additional_attributes></element><element><id>Relation</id><coordinates><x>832</x><y>192</y><w>112</w><h>104</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+-alumnosCalificados</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>544</x><y>104</y><w>152</w><h>80</h></coordinates><panel_attributes>ListaOrdenadaPorCodigo
+--
++ListaOrdenadaPorCodigo()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>688</x><y>144</y><w>64</w><h>24</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>60;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>288</x><y>384</y><w>128</w><h>56</h></coordinates><panel_attributes>NotaConceptual
+--
+-aprobada: boolean
+--
++estaAprobada(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>432</x><y>384</y><w>152</w><h>64</h></coordinates><panel_attributes>NotaNumerica
+--
+_-LIMITE_APROBACION: int = 4_
+-valor: int
+--
++estaAprobada(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>352</x><y>304</y><w>136</w><h>48</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+/Nota/
+--
+/+estaAprobada(): boolean/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>416</x><y>256</y><w>48</w><h>64</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+-nota</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>368</x><y>344</y><w>24</w><h>56</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>464</x><y>344</y><w>24</w><h>56</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>616</x><y>280</y><w>136</w><h>176</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;10;200;150;200</additional_attributes></element><element><id>Relation</id><coordinates><x>456</x><y>256</y><w>24</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>760</x><y>192</y><w>24</w><h>248</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;290;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>488</x><y>184</y><w>264</w><h>24</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;310;10</additional_attributes></element><element><id>Relation</id><coordinates><x>696</x><y>192</y><w>80</w><h>72</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;70;80;70;80;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>424</x><y>16</y><w>192</w><h>72</h></coordinates><panel_attributes>ColaAlumnoCalificado
+--
+--
++add(AlumnoCalificado): void
++remove(): AlumnoCalificado
++get(): AlumnoCalificado()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>272</x><y>48</y><w>168</w><h>80</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>190;10;10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>608</x><y>48</y><w>272</w><h>64</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;320;10;320;60</additional_attributes></element><element><id>Relation</id><coordinates><x>608</x><y>24</y><w>432</w><h>472</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>430;570;520;570;520;10;10;10</additional_attributes></element></diagram>

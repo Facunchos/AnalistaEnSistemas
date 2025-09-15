@@ -1,0 +1,63 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>550</x><y>330</y><w>210</w><h>240</h></coordinates><panel_attributes>/Cheque/
+--
+_+CANT_TIPOS: int = 2_
+-numero: long
+-fechaEmision: Date
+-codigoBanco: int
+-moneda: String
+-valor: double
+--
++cumpleRequisito(): boolean
++getValor():double
++getMoneda(): String
++getCodigoBanco(): int
++getFechaEmision(): Date
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>0</y><w>390</w><h>190</h></coordinates><panel_attributes>TerminalAutoServicio
+--
++cantChequesPorEstadoYTipo(): int[][]
+-llenarMatriz(int[][], Cheque): void
++listarChequesOrdenadosPorBanco(): ListaChequesOrdenadosPorBanco
++depositar(Cheque): boolean
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>560</x><y>110</y><w>210</w><h>190</h></coordinates><panel_attributes>ColaDeCheques
+--
++add(Cheque): void
++remove(): Cheque
++get(): Cheque
++isEmpty(): boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>100</y><w>200</w><h>140</h></coordinates><panel_attributes>lt=&lt;-
+m1=
+-colaDeCheques</panel_attributes><additional_attributes>180;120;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>820</x><y>350</y><w>140</w><h>100</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Estado
+--
+_+BUENO_
+_+REGULAR_
+_+MALO_
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>750</x><y>400</y><w>90</w><h>30</h></coordinates><panel_attributes>lt=&lt;-
+m1=</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>290</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;40;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>650</y><w>200</w><h>130</h></coordinates><panel_attributes>ChequeDiferido
+--
+-fechaPago: Date
+--
++cumpleRequisito():boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>370</y><w>270</w><h>130</h></coordinates><panel_attributes>ListaChequesOrdenadosPorBanco
+--
++compare(Cheque, Cheque): int
++compareByKey(Integer, Cheque): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>660</x><y>620</y><w>250</w><h>130</h></coordinates><panel_attributes>ChequeAlDia
+--
+-bandaSeguridad3D: String
+_-VALOR_LIMITE_PESOS: double = 500000_
+_-VALOR_LIMITE_DOLARES: double = 10000_
+--
++cumpleRequisito():boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>670</x><y>561</y><w>120</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;60</additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>561</y><w>120</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>181</y><w>30</w><h>210</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;190;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>421</y><w>310</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>290;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>220</y><w>210</w><h>70</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+Verificable
+--
+/+cumpleRequisito():boolean/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>280</y><w>170</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;150;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>60</x><y>670</y><w>240</w><h>80</h></coordinates><panel_attributes>FechaUtil
+--
+
+--
+_+esPosteriorAlDiaActual(Date): boolean_
+_+esPosterior(Date, Date): boolean_
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>701</y><w>160</w><h>60</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;140;40</additional_attributes></element></diagram>

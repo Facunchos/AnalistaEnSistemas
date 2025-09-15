@@ -1,0 +1,15 @@
+Una empresa encargada de recibir donaciones, catalogarlas y luego repartirlas nos encarga un sistema para automatizar este proceso.
+
+En una primera etapa, la empresa solamente va a recibir donaciones de ropa, las cuales pueden ser ropa de vestir o ropa de cama. Todas las prendas indican cuál es el color, el nombre del fabricante y si es masculina, femenina o unisex. Adicionalmente, de la ropa de vestir conocemos su talle y de la ropa de cama el tamaño (1 plaza, 2 plazas, queen size, king size).
+
+Los empleados van catalogando las donaciones en distintas cajas. las prendas se catalogan en el estricto orden en el cual llegaron a la empresa. Si la ropa es de vestir, se pueden almacenar hasta 7 prendas por caja, ordenadas por talle. Si la ropa es de cama, se pueden guardar hasta 5 prendas por caja, ordenadas por tamaño. las cajas solo soportan un unico tipo de ropa.
+
+Una vez que la caja se llena, esta se deriva al sector de logística, el cual busca algún camión dentro de la flota de 20 camiones para cargarla. Los camiones, de los cuales conocemos el nombre del conductor, la patente y el destino, almacenan cajas en hileras de 3 x 4. Cada espacio soporta hasta 9 cajas. Una vez que el camión completa su capacidad máxima de cajas, este se envía a la fila para enviarlo a destino.
+
+Basado en lo anteriormente descrito, crea el UML junto con sus relaciones y métodos.
+
+Método procesar(): Este método debe catalogar la ropa y cargar los camiones. El procesamiento debe finalizar una vez que se haya alcanzado la capacidad máxima de la flota de camiones o se hayan acabado las donaciones.
+
+Método porcentajeFlotaUtilizada(): Este método debe informar el porcentaje de la flota que ha sido utilizado para distribuir las donaciones (es decir, cuántos camiones se han necesitado).
+
+Método prendasNoCatalogadas(): Este método debe devolver el número de prendas que no pudieron ser catalogadas y almacenadas debido a la falta de capacidad.
