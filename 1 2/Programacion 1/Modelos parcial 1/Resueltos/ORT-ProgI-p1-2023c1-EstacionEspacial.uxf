@@ -1,0 +1,56 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>40</x><y>63</y><w>240</w><h>120</h></coordinates><panel_attributes>EstacionEspacial
+
+--
+
+--
++ imprimirManifiestos(): void
++ estacionarNave(Nave): boolean
+- buscarAtraqueLibre(): PuntoDeAtraque
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>63</y><w>210</w><h>90</h></coordinates><panel_attributes>PuntoDeAtraque
+--
+--
++ imprimirManifiesto(): void
++ estaDisponible(): boolean
++ estacionar(Nave): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>233</y><w>210</w><h>140</h></coordinates><panel_attributes>/Nave/
+--
+- planetaOrigen: String
+- ultimoPlanetaVisitado: String
+- cantTripulantes: int
+--
++ getCantTripulantes(): int
++ imprimirManifiesto(): void
+/+ completarManifiesto(): void/
+/+ sePuedeEstacionar(): boolean/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>93</y><w>160</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+atraques
+m1=*
+</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>523</y><w>270</w><h>90</h></coordinates><panel_attributes>NaveCargo
+--
+_+ VOL_MAX_ESTACIONAR: double = 100_
+--
++ completarManifiesto(): void
++ sePuedeEstacionar(): boolean
+- volumenDeCargaSuperiorA(double): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>403</y><w>210</w><h>70</h></coordinates><panel_attributes>/NaveComercial/
+--
+- companiaNaviera: String
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>523</y><w>210</w><h>100</h></coordinates><panel_attributes>NaveCruiser
+--
+- cantPasajeros: int
+--
++ completarManifiesto(): void
++ sePuedeEstacionar(): boolean
+- porcPasajeros(): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>500</x><y>363</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-
+</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>463</y><w>110</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;60</additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>463</y><w>130</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>110;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>500</x><y>143</y><w>130</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..1
+- naveEnganchada</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>403</y><w>230</w><h>100</h></coordinates><panel_attributes>Carga
+--
+- descripcion: String
+- volumen: double
+--
++ imprimirManifiesto(): void
++ volumenSuperiorA(double): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>493</y><w>130</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- carga</panel_attributes><additional_attributes>10;10;10;80;110;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>283</y><w>170</w><h>60</h></coordinates><panel_attributes>/Manifestable/
+--
+--
+/+ imprimirManifiesto(): void/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>313</y><w>220</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;200;10</additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>333</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>33</y><w>480</w><h>290</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>400;270;460;270;460;10;10;10;10;30</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>143</y><w>220</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;140;200;10</additional_attributes></element></diagram>
