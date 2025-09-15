@@ -2,7 +2,7 @@
 
 ## 1er Año - 1er Cuatrimestre (1 1)
 - Fundamentos de la Programacion: Falta
-- Informacion de la informatica: Falta
+- Introduccion de la informatica: Listo
 - Ingles: Falta
 - Matematicas: Listo
 - Organizacion empresarial: Falta
