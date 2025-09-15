@@ -26,7 +26,7 @@
 
 ## 2do Año - 2do Cuatrimestre (2 2)
 - Calidad de Software: Falta
-- Estudios Judaicos: Falta
+- Estudios Judaicos: Listo
 - Programacion 3: Falta
 - Projecto Final: Falta
 - Seguridad de Sistemas: Falta
