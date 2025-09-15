@@ -3,19 +3,19 @@
 ## 1er Año - 1er Cuatrimestre (1 1)
 - Fundamentos de la Programacion: Falta
 - Introduccion de la informatica: Listo
-- Ingles: Falta
+- Ingles: Listo
 - Matematicas: Listo
 - Organizacion empresarial: Falta
 - Taller de creatividad: Falta
-- Taller de herramientas de programacion: Falta
+- Taller de herramientas de programacion: Listo
 
 ## 1er Año - 2do Cuatrimestre (1 2)
 - Base de Datos: Falta
 - Programacion 1: Listo
 - Programacion de las Nuevas Tecnologias: Falta
-- Sistemas Administrativos: Falta
+- Sistemas Administrativos: Listo
 - Sistemas Operativos: Falta
-- Taller de programacion: Falta
+- Taller de programacion: Listo
 
 ## 2do Año - 1er Cuatrimestre (2 1)
 - Analisis y Metodologias: Falta
