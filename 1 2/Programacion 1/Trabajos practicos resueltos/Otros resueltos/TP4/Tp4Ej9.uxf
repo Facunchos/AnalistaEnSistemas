@@ -1,0 +1,52 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>190</x><y>80</y><w>230</w><h>210</h></coordinates><panel_attributes>Estacionamiento
+--
+_ -CANT_ESPACIOS: int = 6_
+_ -CANT_NIVELES: int = 8_
+--
++ retirar(int): Auto
++ autosMasMorososPorPiso(): Auto[]
+- obtenerNivelYEspacio(int): int[]
+- existeUbicacion(int, int): boolean
+- hayAutoEnUbicacion(int, int): boolean
+- registraPagos(Auto): boolean
+- crearRegistro(Auto): void
+- obtenerMasMoroso(Auto[]): Auto</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>750</x><y>90</y><w>210</w><h>160</h></coordinates><panel_attributes>Auto
+--
+_- CANT_PAGOS: int = 12_
+- patente: String
+--
++ registraPagos(): boolean
++ getPatente(): String
++ cantidadPagosNoEfectuados(): int
+- existePago(int): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>750</x><y>350</y><w>200</w><h>100</h></coordinates><panel_attributes>Pago
+--
+- monto: double
+- dni: String
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>840</x><y>240</y><w>100</w><h>130</h></coordinates><panel_attributes>lt=&lt;-
+- pagos
+m1=CANT_PAGOS</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>110</y><w>360</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- autos
+m1=[CANT_NIVELES][CANT_ESPACIOS]</panel_attributes><additional_attributes>340;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>180</x><y>390</y><w>240</w><h>80</h></coordinates><panel_attributes>Retiro
+--
+- patente: String
+- exitoso: boolean
+--
++ Retiro(String, Fecha, boolean)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>280</y><w>120</w><h>130</h></coordinates><panel_attributes>lt=&lt;-
+- registroRetiros
+m1=*</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>190</y><w>150</w><h>160</h></coordinates><panel_attributes>Fecha
+--
+- dia: int
+- mes: int
+- año: int
+--
++ Fecha(int, int, int)
+_+ hoy(): Fecha_
++ getDia(): int
++ getMes(): int
++ getAño(): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>200</y><w>150</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- fechaIngreso
+m1=1</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>340</y><w>180</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+
+- fechaRetiro
+m1=1</panel_attributes><additional_attributes>150;10;150;90;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>240</y><w>90</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element></diagram>

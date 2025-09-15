@@ -1,0 +1,37 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>80</x><y>160</y><w>270</w><h>160</h></coordinates><panel_attributes>DeptoDeportes
+--
+_-CANT_PILAS: int = 3_
+--
++ verPelotasEnTopes(): void
++ agregarPelota(Pelota): boolean
++ buscarPelota(String): Pelota
++ pelotasPorTipo(): int[][]
+- obtenerPilaDisponible(): PilaDePelotas
+- buscarPelota(String, PilaDePelotas): Pelota
+- pelotasPorTipo(PilaDePelotas): int[]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>160</y><w>240</w><h>160</h></coordinates><panel_attributes>PilaDePelotas
+--
+_-CAPACIDAD_MAX: int = 5_
+--
++ PilaDePelotas()
++ pop(): Pelota
++ push(Pelota): void
++ peek(): Pelota
++ isEmpty(): boolean
++ isFull(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>220</y><w>210</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- pilas
+m1=[CANT_PILAS]</panel_attributes><additional_attributes>190;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>410</y><w>210</w><h>110</h></coordinates><panel_attributes>Pelota
+--
+- codigo: String
+--
++ mismaPelota(String): boolean
++ getTipo(): Tipo</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>310</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>830</x><y>410</y><w>160</w><h>110</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Tipo
+--
+_+FUTBOL_
+_+BASQUET_
+_+VOLEY_
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>730</x><y>460</y><w>120</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- tipo
+m1=1</panel_attributes><additional_attributes>100;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>310</y><w>300</w><h>150</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>280;130;10;130;10;10</additional_attributes></element></diagram>

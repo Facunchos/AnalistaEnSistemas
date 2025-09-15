@@ -1,0 +1,35 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>170</x><y>40</y><w>250</w><h>170</h></coordinates><panel_attributes>SuppORT
+--
+
+--
++ eliminarTicket(String): Ticket
++ cantTicketsXSectorPrioridad(): int[][]
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>170</x><y>310</y><w>240</w><h>110</h></coordinates><panel_attributes>ColaDeTickets
+--
+
+--
++ add(Ticket): void
++ remove(): Ticket</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>580</x><y>310</y><w>240</w><h>110</h></coordinates><panel_attributes>Ticket
+--
+- id: String
+- fecha: String
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>360</y><w>200</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>180;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>490</y><w>130</w><h>120</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Sector
+--
+_+RRHH_
+_+INSTITUTO_
+_+ESCUELA_
+_+DIRECCION_
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>730</x><y>500</y><w>130</w><h>110</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Prioridad
+--
+_+ALTA_
+_+MEDIA_
+_+BAJA_
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>410</y><w>70</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
+- sector
+m1=1</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>410</y><w>90</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
+- prioridad
+m1=1</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>200</y><w>100</w><h>130</h></coordinates><panel_attributes>lt=&lt;-
+- colaTickets
+m1=1</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>170</y><w>310</w><h>160</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>290;140;290;10;10;10</additional_attributes></element></diagram>

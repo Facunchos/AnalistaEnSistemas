@@ -1,0 +1,29 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>170</x><y>140</y><w>160</w><h>100</h></coordinates><panel_attributes>OrtProp
+--
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>130</x><y>370</y><w>160</w><h>100</h></coordinates><panel_attributes>Inmueble
+--
+
+--
++ setPrecio(double): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>250</y><w>160</w><h>100</h></coordinates><panel_attributes>Inmobiliaria
+--
+
+--
++ notificar(String): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>250</y><w>160</w><h>100</h></coordinates><panel_attributes>Cliente
+--
+
+--
++ notificar(String): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>400</y><w>160</w><h>80</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+/Interesado/
+--
+--
+/+ notificar(String): void/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>410</y><w>180</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- interesados
+m1=*</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>340</y><w>80</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>60;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>340</y><w>80</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;60;60;10</additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>230</y><w>90</w><h>160</h></coordinates><panel_attributes>lt=&lt;-
+- inmuebles
+m1=*</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>180</y><w>140</w><h>90</h></coordinates><panel_attributes>lt=&lt;-
+- inmobiliarias
+m1=*</panel_attributes><additional_attributes>110;70;110;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>150</y><w>390</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+- clientes
+m1=*</panel_attributes><additional_attributes>360;100;360;20;10;20</additional_attributes></element></diagram>

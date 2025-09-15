@@ -1,0 +1,36 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>150</x><y>100</y><w>220</w><h>130</h></coordinates><panel_attributes>GrupoDeFiguras
+--
+
+--
++ mostrarInfoDeFiguras(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>100</y><w>170</w><h>130</h></coordinates><panel_attributes>/Figura/
+--
+- color: String
+--
++ Figura(String)
++ getColor(): String
+/+ area(): double/
+/+ perimetro(): double/
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>140</y><w>200</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- figuras
+m1=*</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>320</y><w>230</w><h>130</h></coordinates><panel_attributes>Circunferencia
+--
+- radio: double
+--
++ Circunferencia(String, double)
++ area(): double
++ perimetro(): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>320</y><w>230</w><h>130</h></coordinates><panel_attributes>Rectangulo
+--
+- base: double
+- altura: double
+--
++ Rectangulo(String, double, double)
++ area(): double
++ perimetro(): double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>760</x><y>320</y><w>240</w><h>130</h></coordinates><panel_attributes>TrianguloEquilatero
+--
+- lado: double
+--
++ TrianguloEquilatero(String, double)
++ area(): double
++ perimetro(): double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>220</y><w>200</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>180;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>220</y><w>210</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;190;100</additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>220</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element></diagram>

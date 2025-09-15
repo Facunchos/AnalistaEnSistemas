@@ -1,0 +1,21 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>580</x><y>220</y><w>190</w><h>130</h></coordinates><panel_attributes>PilaDePelotas
+--
+_-CANT: int = 3_
+--
++ PilaDePelotas()
++ pop(): Pelota
++ push(Pelota): void
++ isEmpty(): boolean
++ isFull(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>580</x><y>430</y><w>160</w><h>100</h></coordinates><panel_attributes>Pelota
+--
+- cantidadUsos: int
+--
++ getCantidadUsos(): int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>340</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>180</x><y>250</y><w>250</w><h>90</h></coordinates><panel_attributes>Club
+--
+_-CANT_GASTADA: int = 7_
+--
++ esTuboUsado(PilaDePelotas): boolean
+- tienePelotasUsadas(PilaDePelotas): boolean
+- esPelotaUsada(Pelota): boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>280</y><w>180</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>160;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>330</y><w>320</w><h>170</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>300;150;10;150;10;10</additional_attributes></element></diagram>

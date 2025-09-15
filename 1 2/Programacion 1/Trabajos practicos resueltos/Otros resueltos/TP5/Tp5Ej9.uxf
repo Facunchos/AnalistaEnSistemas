@@ -1,0 +1,43 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>80</x><y>30</y><w>210</w><h>120</h></coordinates><panel_attributes>Saludador
+--
+--
++ Saludador()
++ Saludador(String)
++ iniciarPrograma(): void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>230</y><w>220</w><h>120</h></coordinates><panel_attributes>ListaOrdenadaIdiomas
+--
+--
++ compare(Idioma, Idioma): int
++ compareByKey(String, Idioma): int
++ search(String): Idioma</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>230</y><w>200</w><h>140</h></coordinates><panel_attributes>Idioma
+--
+_+ES: String = "Español"_
+_+EN: String = "Ingles"_
+- clave: String
+--
++ getClave(): String
++ getMensaje(String): String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>270</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>440</y><w>270</w><h>160</h></coordinates><panel_attributes>Mensaje
+--
+_+BIENVENIDA: String = "BIENVENIDA"_
+_+PEDIR_NOMBRE: String = "PEDIR_NOMBRE"_
+_+SALUDO: String = "SALUDO"_
+_+DESPEDIDA: String = "DESPEDIDA"_
+- clave: String
+- valor: String
+--
++ getClave(): String
++ getValor(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>230</y><w>230</w><h>140</h></coordinates><panel_attributes>ListaOrdenadaMensajes
+--
+--
++ compare(Mensaje, Mensaje): int
++ compareByKey(String, Mensaje): int
++ search(String): Mensaje
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>280</y><w>140</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- mensajes
+m1=1</panel_attributes><additional_attributes>120;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>170</x><y>140</y><w>80</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
+- idomas
+m1=1</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>770</x><y>360</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>360</y><w>230</w><h>150</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>210;130;10;130;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>80</y><w>240</w><h>170</h></coordinates><panel_attributes>lt=&lt;-
+- idioma
+m1=1</panel_attributes><additional_attributes>210;150;210;20;10;20</additional_attributes></element></diagram>

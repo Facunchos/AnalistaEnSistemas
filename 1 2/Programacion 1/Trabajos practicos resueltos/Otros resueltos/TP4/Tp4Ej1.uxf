@@ -1,0 +1,53 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>310</x><y>339</y><w>260</w><h>190</h></coordinates><panel_attributes>Restaurant
+--
+_-CANT_CAJEROS: int = 5_
+_-CANT_ROBOTS: int = 8_
+--
++ montosPorCajero(): double[]
++ informeDePedidos(): ItemReporte[]
++ mostrarPedidosConMasRiesgo(): void
+- getPosCajero(int): int
+- getApellidoCajero(int): String
+- getNivelBateriaRobot(String): int
+- getRobotPorCodigo(String): Robot
+- getCajeroPorId(int): Cajero</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>609</y><w>180</w><h>130</h></coordinates><panel_attributes>Cajero
+--
+- id: int
+- apellido: String
+- antiguedad: int
+--
++ mismoId(int): boolean
++ getApellido(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>519</y><w>110</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
+- cajeros
+m1=CANT_CAJEROS</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>609</y><w>210</w><h>130</h></coordinates><panel_attributes>Robot
+--
+_+NIVEL_MIN_BATERIA: int = 25_
+- codigo: String
+- nivelBateria: int
+--
++ mismoCodigo(String): boolean
++ getNivelBateria(): int
++ nivelBateriaRiesgoso(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>519</y><w>110</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
+- robots
+m1=CANT_ROBOTS</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>59</y><w>180</w><h>160</h></coordinates><panel_attributes>Pedido
+--
+- nombreCliente: String
+- idCajero: int
+- codigoRobot: String
+- monto: double
+--
++ getIdCajero(): int
++ getCodigoRobot(): String
++ getMonto(): double
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>430</x><y>209</y><w>80</w><h>150</h></coordinates><panel_attributes>lt=&lt;-
+- pedidos
+m1=*</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>329</y><w>210</w><h>130</h></coordinates><panel_attributes>ItemReporte
+--
+- monto: double
+- apellidoCajero: String
+- nivelBateriaRobot: int
+--
++ ItemReporte(double, String, int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>620</x><y>239</y><w>410</w><h>70</h></coordinates><panel_attributes>informeDePedidos()
+...
+ItemReporte[] reportePedidos = new ItemReporte[pedidos.size()]
+...</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>369</y><w>230</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>210;10;10;10</additional_attributes></element></diagram>

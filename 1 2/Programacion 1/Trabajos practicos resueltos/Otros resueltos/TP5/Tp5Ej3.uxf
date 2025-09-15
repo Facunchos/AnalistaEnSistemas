@@ -1,0 +1,32 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>240</x><y>170</y><w>250</w><h>170</h></coordinates><panel_attributes>Impresora
+--
+- estaEncendida: boolean
+- cantHojasDisp: int
+--
++ Impresora()
++ agregarDocumento(Documento): void
++ imprimir(): boolean
+- divisorSegunFaz(boolean): double
+- hayHojasSuficientes(): boolean
+- efectuarImpresion(): void
+- cantHojasNecesarias(Documento): int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>590</x><y>330</y><w>160</w><h>120</h></coordinates><panel_attributes>Documento
+--
+- fecha: String
+- cantCarillas: int
+- dobleFaz: boolean
+--
++ getCantCarillas(): int
++ isDobleFaz(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>584</x><y>141</y><w>170</w><h>140</h></coordinates><panel_attributes>ColaDeDocumentos
+--
+--
++ ColaDeDocumentos()
++ ColaDeDocumentos(int)
++ add(Documento): void
++ get(): Documento
++ remove(): Documento
++ isEmpty(): boolean
++ isFull(): boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>190</y><w>120</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- colaDocs</panel_attributes><additional_attributes>100;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>330</y><w>240</w><h>60</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>220;40;10;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>270</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element></diagram>

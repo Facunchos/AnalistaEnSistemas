@@ -1,0 +1,54 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>580</x><y>323</y><w>160</w><h>120</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+/Vacunable/
+--
+_+ MIN_PRIORIDAD: int= 2_
+_+ MED_PRIORIDAD: int= 1_
+_+ MAX_PRIORIDAD: int= 0_
+-
+/+getPrioridad() int/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>323</y><w>160</w><h>140</h></coordinates><panel_attributes>Persona
+--
+_+ EDAD_MAX: int= 60_
+_+ EDAD_MIN: int= 30_
+-dni: String
+-nombre: String
+-edad: int
+-pacRiesgo: boolean
+-
++getPrioridad(): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>533</y><w>140</w><h>70</h></coordinates><panel_attributes>Medico
+-
+-matricula: String
+--
++getPrioridad(): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>533</y><w>140</w><h>60</h></coordinates><panel_attributes>Educador
+--
+--
++getPrioridad(): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>630</x><y>533</y><w>100</w><h>90</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+NivelEducacion
+--
+_+INICIAL_
+_+PRIMARIO_
+_+SECUNDARIO_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>373</y><w>150</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>130;10;10;30</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>453</y><w>100</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;80;40;80;80</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>453</y><w>110</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>90;10;90;40;10;40;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>553</y><w>140</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+-nivelEducacion</panel_attributes><additional_attributes>120;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>23</x><y>41</y><w>430</w><h>120</h></coordinates><panel_attributes>CentroVacunacion
+--
+_-CANT_COLAS: int = 3_
+-
++obtenerColaPorPrioridad(): ColaDePersonas
+-hayPersonasEnColasEntrada(): boolean
+-obtieneSiguientesPersonasEnColaPorPrioridad(): ListaPersonasXPrioridad
+-pasarListaACola(ListaPersonasXPrioridad, ColaDePersonas): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>443</x><y>101</y><w>210</w><h>140</h></coordinates><panel_attributes>lt=&lt;-
+m1=CANT_COLAS
+-colasDePersonas</panel_attributes><additional_attributes>87;120;90;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>223</y><w>160</w><h>80</h></coordinates><panel_attributes>ColaDePersonas
+--
+--
++ add(Persona): void
++ remove(): Persona
++ isEmpty(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>366</x><y>251</y><w>80</w><h>90</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;70;10;10;60;12</additional_attributes></element><element><id>UMLClass</id><coordinates><x>573</x><y>41</y><w>230</w><h>60</h></coordinates><panel_attributes>ListaPersonasXPrioridad
+--
++ compare(Persona,Persona): int
++ compareByKey(Integer, Persona): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>446</x><y>61</y><w>150</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>130;10;10;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>620</x><y>231</y><w>150</w><h>60</h></coordinates><panel_attributes>ColaDePersonas:
+Modelo solo los métodos
+que se usaron en el NS+
+bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>306</x><y>151</y><w>40</w><h>190</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>14;170;10;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>510</x><y>451</y><w>300</w><h>40</h></coordinates><panel_attributes>Las constantes de la interfaz son (y deben ser)
+públicas, por ende, sus implementaciones las heredan
+bg=yellow</panel_attributes><additional_attributes></additional_attributes></element></diagram>

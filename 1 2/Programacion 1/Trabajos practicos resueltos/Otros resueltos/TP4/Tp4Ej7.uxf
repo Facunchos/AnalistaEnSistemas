@@ -1,0 +1,29 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>210</x><y>180</y><w>210</w><h>120</h></coordinates><panel_attributes>Instituto
+--
+
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>580</x><y>180</y><w>250</w><h>250</h></coordinates><panel_attributes>Comision
+--
+_- PRESENTE: char = 'P'_
+_- TARDE: char = 'T'_
+_- AUSENTE: char = 'A'_
+_- ASIST_MIN: double = 0.75_
+_- MAX_AUS: int = 4_
+- codigo: String
+- cantAlumnos: int
+- asistencia: char[][]
+--
++ mostrarAlumnosFinal(): void
++ obtenerTotalTarde(): int
++ obtenerTotalAsistenciaPerfecta(): int
++ obtenerPresentismoPorClase(): double[]
++ mostrarAlumnosLibres(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>220</y><w>190</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- comisiones
+m1=*</panel_attributes><additional_attributes>170;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1040</x><y>180</y><w>210</w><h>120</h></coordinates><panel_attributes>Alumno
+--
+- legajo: int
+- apellido: String
+- edad: int
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>820</x><y>220</y><w>240</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- alumnos
+m1=[cantAlumnos]</panel_attributes><additional_attributes>220;20;10;20</additional_attributes></element></diagram>
